@@ -1,0 +1,244 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #4d90a1;
+    transition: 5s;
+
+}
+.container {
+    background: #57a2b4;
+    height: 85vh;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ! essential for the view of the container because it will put it in the center of the body*/
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    overflow: hidden; /*! important - used it to hide the image that is going outside */
+    transition: 2s;
+}
+
+.nav-bar {
+    /* background: rosybrown; */
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    /* background: rosybrown; */
+    flex-basis: 50%;
+    margin-left: 15px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.nav-items {
+    /* background: lightgreen; */
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.nav-items ul {
+    background: rgba(175, 215, 230, 0.2);
+    border-radius: 0px 0px 10px 10px;
+    height: 100%;
+    margin-right: 80px;
+    backdrop-filter: blur(20px); /* TODO search function of this property*/
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-80px); /* ! the nav items are putted inside of the icon hamburger thanks to this property */
+    transition: 0.5s;
+}
+
+.nav-items ul li {
+    list-style: none;
+    transition: 0.5s;
+}
+
+.nav-items ul li:hover {
+    transform: scale(1.1);
+}
+
+.nav-items ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    /* background: royalblue; */
+    position: relative;
+    height: 85%;
+    width: 100%;
+}
+
+.content-text {
+    margin-top: 30px; /* ! reasses later*/
+    margin-right: 30px;
+    text-align: right;
+}
+
+.content-text h1 {
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.content-text p {
+    color: white;
+    margin-top: 10px;
+}
+
+.content-text button {
+    margin-top: 25px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 80px;
+    outline: none;
+    color: white;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttonSignIn, .buttonSignUp {
+    background: #3c6a77;
+    margin-left: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonSignIn:hover, .buttonSignUp:hover {
+    transform: scale(1.1);
+}
+
+.content-image img {
+    height: 350px;
+    /* width: 400px; /* ! test */
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 80px;
+}
+
+@media screen and (max-width: 1150px) {
+    .content-image img {
+        top: -150px;
+        display: none;
+        /* height: 50%; */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-image img {
+        display: none;
+    }
+}
+
+.social-media {
+    margin-right: 30px;
+}
+
+.social-media ul {
+    margin-top: 85px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media ul li {
+    background: white;
+    border-radius: 50%;
+    margin-left: 15px;
+    height: 30px;
+    width: 30px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-media ul li:hover {
+    transform: scale(1.1);
+}
+
+.social-media ul li a {
+    color: #57a2b4;
+}
+
+.top-wave {
+    height: 250px;
+    position: absolute;
+    top: -45px;
+    left: -15px;
+    z-index: -1;
+}
+
+.bottom-wave {
+    height: 250px;
+    position: absolute;
+    right: -30px;
+    bottom: -65px;
+    z-index: -1;
+}
+
+.bar, .remove {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.bar {
+    color: white;
+}
+
+.remove {
+    color: rgb(240, 60, 60);
+    display: none;
+}
+
+.mode{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 2s;
+}
+
+/* ! this is a class for javascript click event */
+
+.navBar-js {
+    transform: translateY(0px) !important;
+}
+
+.barIcon-js {
+    display: none;
+}
+
+.removeIcon-js {
+    display: flex;
+}
+
+.body-js{
+    background: rgb(56,55,55) !important;
+}
+
+.mode-js{
+    transform: rotateY(180deg);
+}

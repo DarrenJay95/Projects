@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Navigation</title>
+    <!-- ? FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> -->
+    <!-- ? MAIN STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="./img/logo.png" alt="">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1><strong>LONDON EYE</strong></h1>
+            <small>The Millenium Wheel</small>
+            <p>The <span class="color-text">London Eye</span> is a cantilevered observation wheel on the South Bank of the River Thames in London. The structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft). When it opened to the public in 2000 it was the world's tallest Ferris wheel</p>
+            <br>
+            <img src="./img/london-eye.jpeg" alt="">
+            <br>
+            <p>The structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft). When it opened to the public in 2000 it was the world's tallest Ferris wheel. <span class="hide-text"> Its height was surpassed by the 160 metres (525 ft) Star of Nanchang in 2006, the 165 metres (541 ft) Singapore Flyer in 2008, and the 167 metres (548 ft) High Roller (Las Vegas) in 2014. Supported by an A-frame on one side only, unlike the taller Nanchang and Singapore wheels, the Eye is described by its operators as "the world's tallest cantilevered observation wheel". The London Eye used to offer the highest public viewing point in London[17] until it was superseded by the 245-metre-high (804 ft)[18] observation deck on the 72nd floor of The Shard, which opened to the public on 1 February 2013.[19] The London Eye adjoins the western end of Jubilee Gardens (previously the site of the former Dome of Discovery), on the South Bank of the River Thames between Westminster Bridge and Hungerford Bridge beside County Hall, in the London Borough of Lambeth. The nearest tube station is Westminster 420 metres (1,378 ft) away.[20] </span> </p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><i class="fas fa-home">HOME</i></li>
+            <li><i class="fas fa-user-alt">ABOUT</i></li>
+            <li><i class="fas fa-envelope">CONTACT</i></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>

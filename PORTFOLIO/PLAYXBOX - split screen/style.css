@@ -1,0 +1,145 @@
+/* ? GOOGLE API */
+@import url('https://fonts.googleapis.com/css?family=Georgia&display=swap');
+
+/* ? ROOT SCOPE */
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(75, 191, 98, 0.7);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(75, 191, 98, 1);
+    --hover-width: 75%;
+    --other-width: 25%; 
+    --speed: 1000ms;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: #ccc;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.split {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.split.left {
+    background: url('./img/playstation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+}
+
+/* ? OVERLAY LEFT */
+.split.left::before { /* ! when ::before and ::after pseudoclasses are used we need to insert the property "content: '' " */
+    content: '';
+    background-color: var(--left-bg-color);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.split.right {
+    background: url('./img/xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+}
+/* ? OVERLAY RIGHT */
+.split.right::before {
+    content: '';
+    background-color: var(--right-bg-color);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/* ? OVERLAY TRANSITIONS */
+.split.left,
+.split.right, 
+.split.left::before, 
+.split.right::before {
+    transition: all var(--speed) ease-in-out ;
+}
+
+h1 {
+    text-shadow: 2px 4px 8px rgba(0,0,0,1);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 35px;
+    color: white;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    border: none;
+    box-shadow: 2px 4px 8px rgba(0,0,0,1);
+    text-shadow: 2px 4px 8px rgba(0,0,0,1);
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 15px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.split.left .btn:hover {
+    background-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+}
+
+.hover-left .left, 
+.hover-right .right {
+    width: var(--hover-width);
+    /* transition: width 1s ease; /* ! test */
+}
+
+.hover-left .right,
+.hover-right .left {
+    width: var(--other-width);
+    /* transition: width 1s ease; /* ! test */
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 18px;
+        top: 30%;
+        transition: top 0.5s ease;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 7px;
+        font-weight: normal;
+        transition: width 0.5s ease;
+    }
+}
+
